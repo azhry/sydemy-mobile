@@ -11,7 +11,9 @@
     "react": "16.3.0-alpha.1",
     "react-native": "0.54.2",
     "react-native-app-intro": "https://github.com/merryjs/react-native-app-intro",
-    "react-native-shared-preferences": "^1.0.0",
+    "react-native-collapsing-toolbar": "^1.0.0-beta.8",
+    "react-native-fetch-blob": "^0.10.8",
+    "react-native-img-cache": "^1.5.3",
     "react-native-vector-icons": "^4.5.0",
     "react-navigation": "^1.5.2"
   },

@@ -9,20 +9,6 @@ import { BASE_URL } from '../config/Config';
 
 export function Request( url, method, data ) {
 
-	let body = '';
-
-	if ( method == 'POST' ) {
-
-		let keys = Object.keys( data );
-		for ( let i = 0; i < keys.length; i++ ) {
-
-			body += keys[i] + '=' + data[keys[i]];
-			if ( i < keys.length - 1 ) body += '&';
-
-		}
-
-	}
-
 	let http = {
 		method: method,
 		headers: {
@@ -31,9 +17,19 @@ export function Request( url, method, data ) {
 		}
 	};
 
-	if ( method == 'POST' ) http.body = body;
+	if ( method == 'POST' ) 
+	{
+		let body = '';
+		let keys = Object.keys( data );
+		for ( let i = 0; i < keys.length; i++ ) 
+		{
+			body += keys[i] + '=' + data[keys[i]];
+			if ( i < keys.length - 1 ) body += '&';
+		}
+
+		http.body = body;
+	}
 
 	return fetch(BASE_URL + url, http)
 	.then(( response ) => response.json());
 
-}
