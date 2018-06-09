@@ -31,5 +31,6 @@ export function Request( url, method, data ) {
 	}
 
 	return fetch(BASE_URL + url, http)
-	.then(( response ) => response.json());
+			.then(( response ) => response.json());
 
+}
