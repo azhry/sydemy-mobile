@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { StatusBar, Image } from 'react-native';
-import { Container, Header, Left, Body, Right, Button, Icon, Title, Text  } from 'native-base';
+import React, { Component 									} from 'react';
+import { StatusBar 											} from 'react-native';
+import { CachedImage 										} from 'react-native-img-cache';
+import { Header, Left, Body, Right, Button, Icon, Title  	} from 'native-base';
 
 export default class Toolbar extends Component {
 
@@ -20,7 +21,7 @@ export default class Toolbar extends Component {
 			<Header style={{ backgroundColor: '#424242' }}>
 				<StatusBar backgroundColor="#424242"/>
 				{
-					this.props.navigation != undefined ? (<Left>this._renderBackButton( this.props.navigation</Left>) : (<Left><Image style={{ width: 30, height: 30 }} source={require('../../assets/img/in_app_logo.png')} /></Left>)
+					this.props.navigation != undefined ? (<Left>this._renderBackButton( this.props.navigation</Left>) : (<Left><CachedImage style={{ width: 30, height: 30 }} source={require('../../assets/img/in_app_logo.png')} /></Left>)
 				}
 				<Body>
 					<Title>{ this.props.title }</Title>

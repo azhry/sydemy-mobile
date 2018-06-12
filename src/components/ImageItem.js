@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { View, Image } from 'react-native';
-import { Text, Body, Icon } from 'native-base';
-import FadedBackground from './FadedBackground';
+import React, { Component 		} 	from 'react';
+import { View 					} 	from 'react-native';
+import { Text, Content, Card 	} 	from 'native-base';
+import { CachedImage 			} 	from 'react-native-img-cache';
 
 export default class ImageItem extends Component {
 
@@ -11,23 +11,14 @@ export default class ImageItem extends Component {
 
 	render() {
 		return (
-			<View>
-				<Image resizeMode="cover" style={{ width: '100%', height: 200 }} source={{ uri: this.props.image }}/>
-				<View style={{ flex: 1, position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-					<FadedBackground color="#000000" height={ 70 } direction="up">
-						<View style={{ padding: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
-							<Body style={{ alignItems: 'flex-start', flex: 7 }}>
-								<Text style={{ color: 'white' }}>{ this.props.title }</Text>
-								<Text style={{ color: 'white' }} note>{ this.props.description }</Text>
-							</Body>
-							<Body>
-								<Icon name="more" style={{ color: 'white' }}/>
-							</Body>
-						</View>
-					</FadedBackground>
-				</View>
-			</View>
+			<Content style={{ marginHorizontal: 6, marginVertical: 4 }}>
+				<Card style={{ borderRadius: 8 }}>
+					<CachedImage resizeMode="cover" style={{ width: '100%', height: 160, borderRadius: 8 }} source={{ uri: this.props.image }}/>
+					<View style={{ flex: 1, position: 'absolute', bottom: 0, left: 0, right: 0, top: 0, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.2)', borderRadius: 8 }}>
+						<Text style={{ color: 'white', fontSize: 18, textAlign: 'center' }}>{ this.props.title }</Text>
+					</View>
+				</Card>
+			</Content>
 		);
 	}
-
 }

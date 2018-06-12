@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FlatList } from 'react-native';
-import { Container, Content, Text } from 'native-base';
+import { FlatList, View } from 'react-native';
+import { Container, Content, Text, Icon } from 'native-base';
 import Toolbar from './components/Toolbar';
 import ImageItem from './components/ImageItem';
 
@@ -42,12 +42,15 @@ export default class Home extends Component {
 		return (
 			<Container>
 				<Content>
-					<FlatList 
+					<View style={{ marginHorizontal: 6 }}>
+						<Text style={{ fontSize: 19 }}><Icon name="ios-ribbon"/> Our Services</Text>
+					</View>
+					<FlatList
+						numColumns={2}
 						data={ this.state.data }
 						renderItem={({ item }) => 
-							<ImageItem 
+							<ImageItem
 								title={ item.title }
-								description={ item.description }
 								image={ item.image }/>
 						}
 						keyExtractor={( item, index ) => index.toString()}/>

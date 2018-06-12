@@ -56,6 +56,7 @@ export default class FadedBackground extends PureComponent {
 	render() {
 		const { children, height } = this.props;
 		const { collection, pixelsStyle, r, g, b } = this.state;
+		console.log("FADED BACKGROUND RENDERED");
 		return (
 			<View style={{ flexDirection: 'column' }}>
 				<View style={ pixelsStyle }>
