@@ -10,17 +10,15 @@ import { StackNavigator } from 'react-navigation';
 import Gateway from './src/Gateway';
 import Home from './src/Home';
 import ProductScanner from './src/ProductScanner';
-import Login from './src/Login';
-import Newsfeed from './src/Newsfeed';
+import WorkshopList from './src/WorkshopList';
 
 // app routes with react navigation
 const App = StackNavigator(
 	{
 		Gateway: { screen: Gateway },
 		Home: { screen: Home },
+		WorkshopList: { screen: WorkshopList },
 		ProductScanner: { screen: ProductScanner },
-		Login: { screen: Login },
-		Newsfeed: { screen: Newsfeed }
 	},
 	{
 		initialRouteName: 'Home'

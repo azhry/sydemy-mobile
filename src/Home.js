@@ -23,7 +23,7 @@ export default class Home extends Component {
 				title: 'Insight Workshop',
 				description: 'Deskripsi singkat mengenai Workshop',
 				image: 'https://sydemy.com/home/../admission/admin/slider_banner/images/LeafnoPic.png',
-				navigateTo: 'ProductScanner'
+				navigateTo: 'WorkshopList'
 			}, {
 				title: 'Intensive Class',
 				description: 'Deskripsi singkat mengenai Intensive Class',
@@ -60,7 +60,9 @@ export default class Home extends Component {
 								image={item.image}/>
 						)}
 						sliderWidth={deviceWidth}
-						itemWidth={deviceWidth}/>
+						itemWidth={deviceWidth}
+						autoplay
+						loop/>
 					<View style={{ marginHorizontal: 6 }}>
 						<Text style={{ fontSize: 19 }}><Icon name="ios-ribbon"/> Our Services</Text>
 					</View>

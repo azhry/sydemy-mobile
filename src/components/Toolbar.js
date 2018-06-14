@@ -12,7 +12,7 @@ export default class Toolbar extends Component {
 	}
 
 	_renderBackButton( navigation ) {
-		return (<Icon style={{ color: 'white' }} name="arrow-back" onPress={ () => navigation.goBack() } />);
+		return (<Left><Icon style={{ color: 'white' }} name="arrow-back" onPress={ () => navigation.goBack() } /></Left>);
 	}
 
 	render() {
@@ -21,7 +21,7 @@ export default class Toolbar extends Component {
 			<Header style={{ backgroundColor: '#424242' }}>
 				<StatusBar backgroundColor="#424242"/>
 				{
-					this.props.navigation != undefined ? (<Left>this._renderBackButton( this.props.navigation</Left>) : (<Left><CachedImage style={{ width: 30, height: 30 }} source={require('../../assets/img/in_app_logo.png')} /></Left>)
+					this.props.navigation != undefined ? this._renderBackButton( this.props.navigation ) : (<Left><CachedImage style={{ width: 30, height: 30 }} source={require('../../assets/img/in_app_logo.png')} /></Left>)
 				}
 				<Body>
 					<Title>{ this.props.title }</Title>
