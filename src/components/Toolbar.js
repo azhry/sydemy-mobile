@@ -18,12 +18,12 @@ export default class Toolbar extends Component {
 	render() {
 
 		return (
-			<Header style={{ backgroundColor: '#424242' }}>
-				<StatusBar backgroundColor="#424242"/>
+			<Header style={this.props.collapsible ? { backgroundColor: 'rgba(0, 0, 0, 0)' } : { backgroundColor: '#424242' }}>
+				<StatusBar translucent={this.props.collapsible} backgroundColor={this.props.collapsible ? "rgba(0, 0, 0, 0)" : "#424242"}/>
 				{
 					this.props.navigation != undefined ? this._renderBackButton( this.props.navigation ) : (<Left><CachedImage style={{ width: 30, height: 30 }} source={require('../../assets/img/in_app_logo.png')} /></Left>)
 				}
-				<Body>
+				<Body style={{ flex: 2 }}>
 					<Title>{ this.props.title }</Title>
 				</Body>
 				<Right>
