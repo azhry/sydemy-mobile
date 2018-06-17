@@ -11,7 +11,13 @@ export default class Home extends Component {
 
 	static navigationOptions = ({ navigation }) => {
 		return {
-			header: <Toolbar title={ 'Sydemy' } />
+			header: <Toolbar 
+						title={ 'Sydemy' } 
+						navigation={navigation} 
+						noBackButton 
+						menu 
+						topUpMenu
+						popUpMenu/>
 		};
 	};
 
@@ -28,17 +34,17 @@ export default class Home extends Component {
 				title: 'Intensive Class',
 				description: 'Deskripsi singkat mengenai Intensive Class',
 				image: 'https://sydemy.com/home/../admission/admin/slider_banner/images/slider_IC.jpg',
-				navigateTo: 'ProductScanner'
+				navigateTo: 'IntensiveClassList'
 			}, {
 				title: 'Weekend Class',
 				description: 'Deskripsi singkat mengenai Weekend Class',
 				image: 'https://sydemy.com/home/../admission/admin/slider_banner/images/slider_WC.jpg',
-				navigateTo: 'ProductScanner'
+				navigateTo: 'WeekendClassList'
 			}, {
 				title: 'Store',
 				description: 'Deskripsi singkat mengenai Store',
-				image: 'http://placehold.it/200',
-				navigateTo: 'ProductScanner'
+				image: 'https://store.turningtechnologies.com/images/ExamView-screenshot-laptop.jpg',
+				navigateTo: 'Store'
 			}]
 		};
 
@@ -73,7 +79,7 @@ export default class Home extends Component {
 							<ImageItem
 								title={item.title}
 								image={item.image}
-								navigateTo={() => navigate(item.navigateTo)}/>	
+								navigateTo={() => navigate(item.navigateTo, { item })}/>	
 						}
 						keyExtractor={( item, index ) => index.toString()}/>
 				</Content>
