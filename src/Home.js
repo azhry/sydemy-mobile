@@ -1,9 +1,10 @@
 import React, { Component 					} 	from 'react';
 import { FlatList, View, Dimensions 		} 	from 'react-native';
-import { Container, Content, Text, Icon 	} 	from 'native-base';
+import { Container, Content, Text 			} 	from 'native-base';
 import Toolbar 									from './components/Toolbar';
 import ImageItem 								from './components/ImageItem';
 import Carousel 								from 'react-native-snap-carousel';
+import Icon 									from 'react-native-vector-icons/FontAwesome';
 
 const deviceWidth = Dimensions.get('window').width;
 
@@ -57,6 +58,10 @@ export default class Home extends Component {
 		return (
 			<Container>
 				<Content>
+					<View style={{ flexDirection: 'row', flexWrap: 'wrap', marginHorizontal: 10, marginTop: 10, alignItems: 'center' }}>
+						<Icon name="eercast" size={20} style={{ marginRight: 7 }}/>
+						<Text style={{ fontSize: 20 }}>News & Promo</Text>
+					</View>
 					<Carousel
 						ref={c => { this._carousel = c; }}
 						data={this.state.data}
@@ -69,8 +74,9 @@ export default class Home extends Component {
 						itemWidth={deviceWidth}
 						autoplay
 						loop/>
-					<View style={{ marginHorizontal: 6 }}>
-						<Text style={{ fontSize: 19 }}><Icon name="ios-ribbon"/> Our Services</Text>
+					<View style={{ flexDirection: 'row', flexWrap: 'wrap', marginHorizontal: 6, marginTop: 10, alignItems: 'center' }}>
+						<Icon name="magic" size={20} style={{ marginRight: 7 }}/>
+						<Text style={{ fontSize: 20 }}>Our Service</Text>
 					</View>
 					<FlatList
 						numColumns={2}

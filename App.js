@@ -35,7 +35,7 @@ const App = StackNavigator(
 		Store: { screen: Store }
 	},
 	{
-		initialRouteName: 'Store'
+		initialRouteName: 'Home'
 	}
 );
 
