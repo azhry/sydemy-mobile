@@ -35,8 +35,8 @@ export default class Home extends Component {
 				image: 'https://sydemy.com/home/../admission/admin/slider_banner/images/slider_WC.jpg',
 				navigateTo: 'ProductScanner'
 			}, {
-				title: 'Shop',
-				description: 'Deskripsi singkat mengenai Shop',
+				title: 'Store',
+				description: 'Deskripsi singkat mengenai Store',
 				image: 'http://placehold.it/200',
 				navigateTo: 'ProductScanner'
 			}]

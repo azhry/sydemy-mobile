@@ -23,7 +23,7 @@ const App = StackNavigator(
 		ProductScanner: { screen: ProductScanner },
 	},
 	{
-		initialRouteName: 'WorkshopDetail'
+		initialRouteName: 'Home'
 	}
 );
 

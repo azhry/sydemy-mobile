@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, TouchableNativeFeedback, View } from 'react-native';
 import { Container, Content } from 'native-base';
 import Toolbar from './components/Toolbar';
 import WorkshopItem from './components/WorkshopItem';
@@ -33,17 +33,25 @@ export default class WorkshopList extends Component {
 	}
 
 	render() {
+		const { navigate } = this.props.navigation;
+
 		return (
 			<Container>
 				<Content>
 					<FlatList 
 						data={this.state.data}
 						renderItem={({ item }) => 
-							<WorkshopItem 
-								title={item.title}
-								image={item.image}
-								description={item.description}
-								date={item.date}/>
+							<TouchableNativeFeedback
+								background={TouchableNativeFeedback.SelectableBackground()}
+								onPress={() => navigate('WorkshopDetail', { item })}>
+								<View>
+									<WorkshopItem 
+										title={item.title}
+										image={item.image}
+										description={item.description}
+										date={item.date}/>
+								</View>
+							</TouchableNativeFeedback>
 						}
 						keyExtractor={( item, index ) => index.toString()}/>
 				</Content>
