@@ -18,6 +18,8 @@ import WeekendClassList from './src/WeekendClassList';
 import WeekendClassDetail from './src/WeekendClassDetail';
 import TopUpScanner from './src/TopUpScanner';
 import Store from './src/Store';
+import ProductList from './src/ProductList';
+import ProductDetail from './src/ProductDetail';
 
 // app routes with react navigation
 const App = StackNavigator(
@@ -32,10 +34,12 @@ const App = StackNavigator(
 		WeekendClassDetail: { screen: WeekendClassDetail },
 		TopUpScanner: { screen: TopUpScanner },
 		ProductScanner: { screen: ProductScanner },
-		Store: { screen: Store }
+		Store: { screen: Store },
+		ProductList: { screen: ProductList },
+		ProductDetail: { screen: ProductDetail }
 	},
 	{
-		initialRouteName: 'Home'
+		initialRouteName: 'Store'
 	}
 );
 

@@ -30,7 +30,7 @@ export default class Toolbar extends Component {
 				<TouchableNativeFeedback 
 					style={{ backgroundColor: '#424242' }}
 					background={TouchableNativeFeedback.SelectableBackground()}
-					onPress={() => navigate('TopUpScanner')}>
+					onPress={() => navigation.navigate('TopUpScanner')}>
 					<Icon name="qrcode" size={25} color="white"/>
 				</TouchableNativeFeedback>
 			</View>
