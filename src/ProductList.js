@@ -36,6 +36,9 @@ export default class ProductList extends Component {
 	}
 
 	render() {
+
+		const { navigate } = this.props.navigation;
+
 		return (
 			<Container>
 				<Content>
@@ -47,7 +50,7 @@ export default class ProductList extends Component {
 								title={item.title}
 								image={item.image}
 								price={item.price}
-								navigateTo={() => navigate(item.navigateTo, { item })}/>	
+								navigateTo={() => navigate('ProductDetail', { item })}/>	
 						}
 						keyExtractor={( item, index ) => index.toString()}/>
 				</Content>

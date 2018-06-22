@@ -43,7 +43,11 @@ export default class ProductScanner extends Component {
 
 	onSuccess = e => {
 		console.log(e);
-		let item = { title: e.data };
+		let item = { 
+			title: 'Python T-shirt',
+			price: 'Rp. 300.000,-',
+			image: 'https://images-na.ssl-images-amazon.com/images/I/61Aarfx%2B5YL._UX385_.jpg' 
+		};
 		this.props.navigation.navigate('ProductDetail', { item });
 	};
 

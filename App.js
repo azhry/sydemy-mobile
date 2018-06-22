@@ -39,7 +39,7 @@ const App = StackNavigator(
 		ProductDetail: { screen: ProductDetail }
 	},
 	{
-		initialRouteName: 'Store'
+		initialRouteName: 'Home'
 	}
 );
 
