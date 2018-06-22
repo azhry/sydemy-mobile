@@ -1,8 +1,6 @@
-# Synapse Academy Mobile
-
 <p align="center">
   <img src="https://github.com/azhry/sydemy-mobile/blob/master/assets/img/in_app_logo.png" width="100" /><br>
-  <h2 align="center">SYDEMY</h2>
+  <h2 align="center">SYDEMY MOBILE</h2>
 </p>
 
 Synapse Academy mobile (a.k.a Sydemy) is an android application which provides information about our services in Synapse Academy, which are:
