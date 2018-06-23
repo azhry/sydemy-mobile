@@ -68,7 +68,8 @@ export default class Home extends Component {
 						renderItem={({item, index}) => (
 							<ImageItem 
 								title={item.title}
-								image={item.image}/>
+								image={item.image}
+								navigateTo={() => navigate(item.navigateTo, { item })}/>
 						)}
 						sliderWidth={deviceWidth}
 						itemWidth={deviceWidth}

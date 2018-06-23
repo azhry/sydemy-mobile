@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, View } from 'react-native';
+import { View } from 'react-native';
 import { Container, Content, Text, Button } from 'native-base';
 import CollapsibleToolbar from 'react-native-collapsible-toolbar';
 import HTML from 'react-native-render-html';
