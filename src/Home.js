@@ -63,7 +63,6 @@ export default class Home extends Component {
 						<Text style={{ fontSize: 20 }}>News & Promo</Text>
 					</View>
 					<Carousel
-						ref={c => { this._carousel = c; }}
 						data={this.state.data}
 						renderItem={({item, index}) => (
 							<ImageItem 
